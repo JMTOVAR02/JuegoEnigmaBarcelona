@@ -1,17 +1,172 @@
+@font-face {
+  font-family: "BankGothic Medium";
+  src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf")
+    format("truetype");
+  font-weight: 600;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  background: url("./assets/img/body-back.jpg") repeat;
+}
+
 header {
+  background-image: url(./assets/img/bg_menu.png);
+  display: flex;
+  border-bottom: 7px solid #ff5f01;
+  padding: 0.5em;
 }
 
 header ul {
   list-style-type: none;
 }
 
+header div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
 header ul li img {
-  height: 15px;
-  width: 20px;
+  height: 17px;
+  width: 22px;
+  cursor: pointer;
+}
+
+header nav {
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  font-size: 18px;
+}
+
+header nav img {
+  height: 64px;
+  width: 216px;
+  margin-right: 2em;
+}
+
+header nav div {
+  display: flex;
+  gap: 0.3em;
+  font-family: "BankGothic Medium";
+}
+
+header nav div p {
+  font-size: 19px;
+  margin-left: -0.5em;
+}
+
+header nav div span {
+  color: #ff5f01;
+  font-weight: bold;
+  cursor: pointer;
+  height: 1em;
+}
+
+header nav ul {
+  font-family: "BankGothic Medium";
+  display: flex;
+  gap: 2em;
+  margin-left: -0.5em;
+}
+
+header nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li:first-child::before {
+  content: "– ";
+  color: #ff5f01;
+  margin-right: 0.4em;
+  font-size: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.reservas {
+  color: white;
+  text-decoration: none;
+  background-color: #ff5f01;
+  padding: 0.5rem;
+}
+
+.main-container {
+  height: 80vh;
+  position: relative;
+  background-image: url(./assets/img/home.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.reservas-container {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0em;
+}
+
+.reservas-container .reservas-container-boton {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  gap: 1.85em;
+}
+
+.reservas-container .reservas-container-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.reservas-container a {
+  text-decoration: none;
+  font-family: "BankGothic Medium", sans-serif;
+  font-size: 35px;
+  color: white;
+  background-color: #ff5f01;
+  padding: 0.235em 5.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.reservas-container p:first-of-type {
+  color: #ff5f01;
+  font-family: "BankGothic Medium", sans-serif;
+  letter-spacing: 1px;
+  font-size: 32px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.reservas-container p:nth-of-type(2) {
+  color: white;
+  font-family: "BankGothic Medium", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.reservas-container p:last-of-type {
+  color: white;
+  font-family: "BankGothic Medium", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
