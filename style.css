@@ -1,3 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-naranja {
+    display: flex;
+    background-image: url(assets/svg/bg_footer.png);
+    padding: 20px 20px;
+    justify-content: space-between;  
+}
+
+
+.footer-naranja a, p {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.footer-texto {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+
+.footer-iconos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-naranja img {
+    width: 70px;
+}
+
+.footer-negro {
+    display: flex;
+    background-color: black;
+    gap: 70px;
+    padding: 6px 6px;
+}
+
+.footer-negro a {
+    text-decoration: none;
+    color: white;
+    margin-left: 80px;
+}
 @font-face {
   font-family: "BankGothic Medium";
   src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf")
