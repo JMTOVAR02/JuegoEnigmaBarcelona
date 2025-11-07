@@ -1,52 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.footer-naranja {
-    display: flex;
-    background-image: url(assets/svg/bg_footer.png);
-    padding: 20px 20px;
-    justify-content: space-between;  
-}
-
-
-.footer-naranja a, p {
-    color: white;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.footer-texto {
-    display: flex;
-    align-items: center;
-    gap: 200px;
-}
-
-.footer-iconos {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.footer-naranja img {
-    width: 70px;
-}
-
-.footer-negro {
-    display: flex;
-    background-color: black;
-    gap: 70px;
-    padding: 6px 6px;
-}
-
-.footer-negro a {
-    text-decoration: none;
-    color: white;
-    margin-left: 80px;
-}
 @font-face {
   font-family: "BankGothic Medium";
   src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf")
@@ -58,6 +9,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "BankGothic Medium";
 }
 
 body {
@@ -103,7 +55,6 @@ header nav img {
 header nav div {
   display: flex;
   gap: 0.3em;
-  font-family: "BankGothic Medium";
 }
 
 header nav div p {
@@ -119,7 +70,6 @@ header nav div span {
 }
 
 header nav ul {
-  font-family: "BankGothic Medium";
   display: flex;
   gap: 2em;
   margin-left: -0.5em;
@@ -184,7 +134,6 @@ header nav ul li a {
 
 .reservas-container a {
   text-decoration: none;
-  font-family: "BankGothic Medium", sans-serif;
   font-size: 35px;
   color: white;
   background-color: #ff5f01;
@@ -196,7 +145,6 @@ header nav ul li a {
 
 .reservas-container p:first-of-type {
   color: #ff5f01;
-  font-family: "BankGothic Medium", sans-serif;
   letter-spacing: 1px;
   font-size: 32px;
   margin: 0;
@@ -205,7 +153,6 @@ header nav ul li a {
 
 .reservas-container p:nth-of-type(2) {
   color: white;
-  font-family: "BankGothic Medium", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
   margin: 0;
@@ -213,9 +160,226 @@ header nav ul li a {
 
 .reservas-container p:last-of-type {
   color: white;
-  font-family: "BankGothic Medium", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+/*////////////////////////////SERVICIOS////////////////////////////*/
+.servicios {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 3em;
+}
+
+.servicios-virus {
+  width: 35.625em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 2em;
+}
+
+.servicios-virus img {
+  padding: 0.5em;
+  border-top: 10px solid #ff5f01;
+  border-right: 1px solid #ff5f01;
+  border-bottom: 3px solid #ff5f01;
+  border-left: 10px solid #ff5f01;
+  border-radius: 20em;
+  transform: scale(1.2);
+}
+
+.servicios-virus-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(./assets/img/metal_izquierdo.png);
+  background-size: cover;
+  gap: 2em;
+  height: 100%;
+  padding: 4em 2em 1.5em 2em;
+}
+
+.virus-contenedor-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.virus-contenedor-text p:first-of-type {
+  color: #ff5f01;
+  font-size: 24px;
+}
+
+.virus-contenedor-text :nth-child(2) {
+  font-size: 28px;
+}
+
+.virus-contenedor-text :nth-child(3) {
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.virus-contenedor-text :last-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.virus-contenedor-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.virus-contenedor-precio span {
+  color: #ff5f01;
+}
+
+.virus-contenedor-precio p {
+  color: black;
+  font-size: 16px;
+}
+
+.virus-contenedor-boton {
+  text-decoration: none;
+  color: #007bbf;
+  background-color: #ff5f01;
+  padding: 0.65em 0.5em;
+  align-self: flex-end;
+}
+
+.servicios-keylock {
+  width: 35.625em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 2em;
+}
+
+.servicios-keylock img {
+  padding: 0.5em;
+  border-top: 10px solid #ff5f01;
+  border-right: 10px solid #ff5f01;
+  border-bottom: 3px solid #ff5f01;
+  border-left: 1px solid #ff5f01;
+  border-radius: 20em;
+  transform: scale(1.2);
+}
+
+.servicios-keylock-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(./assets/img/metal_derecho.png);
+  background-size: cover;
+  gap: 2em;
+  height: 100%;
+  padding: 4em 2em 1.5em 2em;
+}
+
+.keylock-contenedor-boton {
+  text-decoration: none;
+  color: #007bbf;
+
+  background-color: #ff5f01;
+  padding: 0.65em 0.5em;
+  align-self: flex-start;
+}
+/*////////////////////////////RETOS////////////////////////////*/
+.retos {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5em;
+  margin-bottom: 10em;
+}
+
+.retos img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.retos-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.retos-container-1 {
+  width: 100%;
+  display: flex;
+}
+
+/*////////////////////////////FOOTER////////////////////////////*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer-naranja {
+  display: flex;
+  background-image: url(assets/svg/bg_footer.png);
+  padding: 20px 20px;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.footer-naranja a,
+p {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.footer-texto {
+  display: flex;
+  margin-top: 2em;
+  align-items: center;
+  align-self: center;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.footer-texto a,
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.footer-iconos {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-naranja img {
+  width: 70px;
+}
+
+.footer-negro {
+  display: flex;
+  background-color: black;
+  gap: 70px;
+  padding: 6px 6px;
+}
+
+.footer-negro a {
+  text-decoration: none;
+  color: white;
+  margin-left: 80px;
 }
