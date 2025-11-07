@@ -1,7 +1,6 @@
 @font-face {
   font-family: "BankGothic Medium";
-  src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf")
-    format("truetype");
+  src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf") format("truetype");
   font-weight: 600;
 }
 
@@ -107,6 +106,7 @@ header nav ul li a {
   overflow: hidden;
 }
 
+
 .reservas-container {
   position: absolute;
   bottom: 0px;
@@ -166,6 +166,40 @@ header nav ul li a {
   letter-spacing: 0.5px;
 }
 
+/* TERMINOS Y CONDICIONES */ /* AVISO LEGAL */ /* PRIVACIDAD */
+
+.main-terminos, .main-aviso-legal, .main-privacidad{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 340px;
+  width: 65%;
+  padding-bottom: 10%;
+}
+
+.main-terminos h2, .main-aviso-legal h2, .main-privacidad h2 {
+  color: #ff5f01;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.main-terminos h3, .main-aviso-legal h3, .main-privacidad h3 {
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.main-terminos p, .main-aviso-legal p, .main-privacidad p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  text-align: justify;
+  line-height: 1.5;
 /*////////////////////////////SERVICIOS////////////////////////////*/
 .servicios {
   display: flex;
