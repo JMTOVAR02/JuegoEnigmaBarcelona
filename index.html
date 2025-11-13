@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juego Enigma Madrid</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Juego Enigma Madrid | Escape Room</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../assets/ico/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
         </ul>
       </div>
       <nav>
-        <a href="https://juegoenigmamadrid.es/"
+        <a href="/"
           ><img
             src="https://juegoenigmamadrid.es/wp-content/themes/juegoenigma/images/logo.png?x24212"
             alt="Logo Enigma"
@@ -35,8 +36,10 @@
           <li>
             <a href="https://juegoenigmamadrid.es/es/home/">Escape Room</a>
           </li>
-          <li>Para regalar</li>
-          <li><a href="empresas.html">Empresas</a></li>
+          <li>
+            <a href="./pages/paraRegalar.html">Para regalar</a>
+          </li>
+          <li><a href="./pages/empresas.html">Empresas</a></li>
           <li>Colaboremos</li>
           <li>
             <a
@@ -119,6 +122,7 @@
         <img
           src="./assets/img/home_icons.png"
           alt="Iconos varios de temática Scape Room: reloj, candado, equipo, puerta"
+          class="collage"
         />
         <section class="retos-container">
           <div class="retos-container-1">
@@ -139,11 +143,7 @@
               </div>
             </div>
           </div>
-          <div class="retos-container-1">
-            <img
-              src="./assets/img/box-02.png"
-              alt="Contador con 59 minutos y 59 segundos"
-            />
+          <div class="retos-container-2">
             <div>
               <img src="./assets/img/mini_hexagon_02.png" alt="" />
               <div>
@@ -157,13 +157,17 @@
                 </p>
               </div>
             </div>
+            <img
+              src="./assets/img/box-02.png"
+              alt="Contador con 59 minutos y 59 segundos"
+            />
           </div>
           <div class="retos-container-1">
-            <img src="./assets/img/box-03.png" alt="Laberinto" />
+            <img src="./assets/img/box-03.png" alt="Manos uniendo engranajes" />
             <div>
               <img src="./assets/img/mini_hexagon_03.png" alt="" />
               <div>
-                <h3>Diversión ante todo</h3>
+                <h3 class="engranaje">Diversión ante todo</h3>
                 <p>
                   Eso si ¡sin llegar al dolor de cabeza! nuestra filosofía es
                   ante todo diversión a través del reto, pero no nos gusta que
@@ -174,12 +178,11 @@
               </div>
             </div>
           </div>
-          <div class="retos-container-1">
-            <img src="./assets/img/box-04.png" alt="Manos uniendo engranajes" />
+          <div class="retos-container-2">
             <div>
               <img src="./assets/img/mini_hexagon_04.png" alt="" />
               <div>
-                <h3>Sé protagonista</h3>
+                <h3 class="laberinto">Sé protagonista</h3>
                 <p>
                   En Juego Enigma nos encanta que te sientas protagonista de una
                   historia alejada de tu día a día, es por ello que ponemos
@@ -189,6 +192,7 @@
                 </p>
               </div>
             </div>
+            <img src="./assets/img/box-04.png" alt="Laberinto" />
           </div>
         </section>
       </section>

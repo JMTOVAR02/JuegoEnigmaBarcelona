@@ -1,7 +1,15 @@
 @font-face {
   font-family: "BankGothic Medium";
-  src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf") format("truetype");
+  src: url("../assets/fonts/bankGothic/bank gothic medium bt.ttf")
+    format("truetype");
   font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: 500;
 }
 
 * {
@@ -20,6 +28,11 @@ header {
   display: flex;
   border-bottom: 7px solid #ff5f01;
   padding: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 header ul {
@@ -91,6 +104,10 @@ header nav ul li a {
   text-decoration: none;
 }
 
+main {
+  margin-top: 6em;
+}
+
 .reservas {
   color: white;
   text-decoration: none;
@@ -105,7 +122,6 @@ header nav ul li a {
   background-size: cover;
   overflow: hidden;
 }
-
 
 .reservas-container {
   position: absolute;
@@ -724,29 +740,584 @@ h3 {
 .retos {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 65%;
   margin: 0 auto;
   margin-top: 5em;
   margin-bottom: 10em;
 }
 
-.retos img {
-  width: 50%;
+.retos .collage {
+  width: 40%;
   margin: 0 auto;
+  margin-bottom: 9em;
 }
 
 .retos-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: 9em;
+  margin: 0 auto;
+}
+
+.retos-container img {
+  width: 44%;
 }
 
 .retos-container-1 {
   width: 100%;
   display: flex;
+  gap: 2em;
 }
 
-/*////////////////////////////FOOTER////////////////////////////*/
+.retos-container-1 div {
+  position: relative;
+  width: 100%;
+}
+
+.retos-container-1 div img {
+  width: 70%;
+  position: absolute;
+  top: -60px;
+}
+
+.retos-container-1 div h3 {
+  color: white;
+  font-size: 28px;
+  position: absolute;
+  top: -20px;
+  position: relative;
+  margin-left: 9em;
+}
+
+.retos-container-1 div .engranaje {
+  margin-left: 5em;
+}
+
+.retos-container-1 div p {
+  color: white;
+  font-size: 20px;
+  width: 70%;
+  position: absolute;
+  right: 200px;
+  line-height: 1.5;
+  text-align: right;
+  margin: 0 auto;
+}
+
+.retos-container-2 {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+}
+
+.retos-container-2 div {
+  position: relative;
+  width: 100%;
+}
+
+.retos-container-2 div img {
+  width: 70%;
+  position: absolute;
+  top: -60px;
+  right: 20px;
+}
+
+.retos-container-2 div h3 {
+  color: white;
+  font-size: 28px;
+  position: absolute;
+  top: -20px;
+  position: relative;
+  margin-left: 6em;
+}
+
+.retos-container-2 div .laberinto {
+  margin-left: 10em;
+}
+
+.retos-container-2 div p {
+  color: white;
+  font-size: 20px;
+  width: 70%;
+  position: absolute;
+  right: 80px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/*////////////////////////////REGALOS////////////////////////////*/
+.regalo-section {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.regalo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: start;
+  padding: 3rem;
+  color: white;
+}
+
+.regalo-texto {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.regalo-texto h2 {
+  color: #ff5f01;
+  margin-bottom: 0.5rem;
+  font-size: 1.75em;
+}
+
+.regalo-texto .intro {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.regalo img:nth-of-type(1) {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  align-self: start;
+  margin-left: 1em;
+}
+
+.regalo img:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  padding-right: 1em;
+  border-right: 5px solid #ff5f01;
+}
+
+.regalo > p {
+  grid-column: 2;
+  grid-row: 2;
+  line-height: 1.6;
+  margin-left: 1em;
+  font-weight: 900;
+}
+
+.opciones-section {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2em;
+  align-items: start;
+  padding: 3rem;
+  color: white;
+}
+
+.opciones .opciones-img {
+  width: 100%;
+}
+
+.opciones-texto {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  position: relative;
+}
+
+.opciones-texto h2 {
+  color: #ff5f01;
+}
+
+.opciones-texto p {
+  width: 95%;
+  position: absolute;
+  right: 0;
+}
+
+.bono-section {
+  width: 100%;
+  height: 100%;
+  padding: 2.5em;
+  padding-bottom: 4em;
+  background-image: url(./assets/img/metal_izquierdo.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+}
+
+.bono-section img {
+  width: 100%;
+  background-size: cover;
+}
+
+.bono-contenido h3 {
+  color: #ff5f01;
+  font-size: 1.5em;
+}
+
+.bono-contenido p {
+  color: black;
+  font-weight: bold;
+}
+
+.bono-contenido .nota {
+  color: #ff5f01;
+}
+
+.bono-boton {
+  position: absolute;
+  right: 2.5em;
+  color: white;
+  text-decoration: none;
+  background-color: #ff5f01;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+}
+
+.fajo-section {
+  width: 100%;
+  height: 100%;
+  padding: 2.5em;
+  padding-bottom: 4em;
+  background-image: url(./assets/img/metal_derecho.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+}
+
+.fajo-section img {
+  width: 100%;
+  background-size: cover;
+}
+
+.fajo-contenido h3 {
+  color: #ff5f01;
+  font-size: 1.5em;
+}
+
+.fajo-contenido p {
+  color: black;
+  font-weight: bold;
+}
+
+.fajo-contenido .nota {
+  color: #ff5f01;
+}
+
+.fajo-boton {
+  position: absolute;
+  left: 2.5em;
+  color: white;
+  text-decoration: none;
+  background-color: #ff5f01;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+}
+
+/*/ ///////////////////////////COMPRAR////////////////////////////*/
+
+.comprar {
+  background-color: #000000;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 1.875em;
+  padding: 2em;
+  margin-bottom: 5em;
+}
+
+.grid-comprar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.comprar-virus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.comprar-virus-title {
+  background-image: url(./assets/img/default.jpg);
+  background-size: cover;
+  font-size: 2.25em;
+  font-weight: 700;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 4em;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0.8em;
+}
+
+.comprar-virus-title p {
+  font-family: "Montserrat";
+  font-size: 1em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+}
+
+.comprar-virus-paragraph {
+  width: 90%;
+  font-family: "Montserrat";
+}
+
+.comprar-virus-form {
+  font-family: "Montserrat";
+  color: white;
+  margin-top: 1em;
+  margin-top: auto;
+}
+
+.comprar-virus-form label {
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: 0.3em;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.comprar-virus-form select {
+  width: 100%;
+  padding: 0.7em;
+  border-radius: 0.3em;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.total-compra {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.8em;
+  font-weight: 600;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+}
+
+.total-compra button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 0.3em;
+  padding: 0.6em 1em;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background 0.2s ease-in-out;
+  font-family: "Montserrat";
+}
+
+.total-compra button:hover {
+  background-color: #218838;
+}
+
+.comprar-keylock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.comprar-keylock-title {
+  background-image: url(./assets/img/uploads.png);
+  background-size: cover;
+  font-size: 2.25em;
+  font-weight: 700;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 4em;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0.8em;
+}
+
+.comprar-keylock-title p {
+  font-family: "Montserrat";
+  font-size: 1em;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+}
+
+.comprar-keylock-paragraph {
+  width: 90%;
+  font-family: "Montserrat";
+}
+
+/*////////////////////////////EMPRESAS////////////////////////////*/
+
+.body-empresas {
+  background: url("./assets/img/noise_tile-white.jpg") repeat;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 23em;
+  overflow: hidden;
+  border-bottom: 4px solid #ff5f01;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 2s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide:first-child img {
+  object-position: top;
+}
+
+.slide h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 1em;
+}
+.next {
+  right: 1em;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1em;
+  right: 15em;
+}
+
+.dot {
+  height: 1em;
+  width: 1em;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid gray;
+}
+
+.dot.active {
+  background-color: #ff5f01;
+  border: 2px solid #7f2f00;
+}
+
+.empresas {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.empresas h1 {
+  color: #ff5f01;
+  font-size: 2.5em;
+  margin: 0 auto;
+}
+
+.empresas p {
+  color: #000;
+  font-weight: bold;
+}
+
+.empresas img {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.carrusel {
+  width: 80%;
+  margin: 3em auto;
+  overflow: hidden;
+  background: url("../assets/img/noise_tile-white.jpg") repeat;
+  margin-bottom: 20em;
+}
+
+.carrusel-container {
+  display: flex;
+  width: 400%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carrusel-container > div {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carrusel img {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.carrusel img:hover {
+  transform: scale(1.1);
+}
+
+/*/ ///////////////////////////FOOTER////////////////////////////*/
 footer {
   position: fixed;
   bottom: 0;
