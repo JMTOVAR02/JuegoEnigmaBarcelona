@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Enigma Madrid | Escape Room</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../assets/ico/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="body-empresas">
+    <header>
+      <div>
+        <ul>
+          <li>
+            <img src="../assets/svg/spain.svg" alt="Icono bandera de España" />
+          </li>
+          <li>
+            <img
+              src="../assets/svg/usa.svg"
+              alt="Icono bandera de Estados Unidos"
+            />
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <a href="/"
+          ><img
+            src="https://juegoenigmamadrid.es/wp-content/themes/juegoenigma/images/logo.png?x24212"
+            alt="Logo Enigma"
+        /></a>
+        <div>
+          <p>/MADRID</p>
+          <span>+</span>
+        </div>
+        <ul>
+          <li>
+            <a href="https://juegoenigmamadrid.es/es/home/">Escape Room</a>
+          </li>
+          <li>
+            <a href="./pages/paraRegalar.html">Para regalar</a>
+          </li>
+          <li>Empresas</li>
+          <li>Colaboremos</li>
+          <li>
+            <a
+              href="href=https://juegoenigmamadrid.es/es/reserva/"
+              class="reservas"
+              >Reservar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="slider">
+      <div class="slides">
+        <div class="slide active">
+          <img
+            src="https://juegoenigmamadrid.es/wp-content/uploads/2018/01/slider_empresas_02.png"
+            alt="Selección de personal 1"
+          />
+          <h2>SELECCIÓN DE PERSONAL</h2>
+        </div>
+        <div class="slide">
+          <img
+            src="https://juegoenigmamadrid.es/wp-content/uploads/2018/01/slider_empresas_01.png"
+            alt="Selección de personal 2"
+          />
+          <h2>TEAMBUILDING</h2>
+        </div>
+      </div>
+
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <script>
+      let index = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      const showSlide = (i) => {
+        slides.forEach(
+          (s, n) => (s.style.transform = `translateX(-${i * 100}%)`)
+        );
+        dots.forEach((d) => d.classList.remove("active"));
+        dots[i].classList.add("active");
+      };
+
+      document.querySelector(".next").onclick = () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      };
+      document.querySelector(".prev").onclick = () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      };
+      dots.forEach(
+        (dot, i) =>
+          (dot.onclick = () => {
+            index = i;
+            showSlide(index);
+          })
+      );
+
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 10000);
+    </script>
+    <section class="empresas">
+      <h1>JUEGO ENIGMA PARA EMPRESAS</h1>
+      <p>
+        Los Juegos de Escape son herramientas de gran utilidad para el
+        desarrollo empresarial. Jugar no es solo cosa de niños, la gamificación
+        puede ayudar a detectar y hacer crecer las capacidades clave de los
+        trabajadores a través de dinámicas entretenidas y únicas. Más de 100
+        empresas ya han confiado en nuestra experiencia para mejorar su equipo,
+        contacta con nosotros y descubre el porqué.
+      </p>
+      <img src="../assets/img/empresa_icons.png" alt="" />
+    </section>
+    <section class="carrusel">
+      <h2>ALGUNAS DE LAS EMPRESAS QUE YA HAN CONTADO CON NOSOTROS</h2>
+      <div class="carrusel-container">
+        <div>
+          <img
+            src="../assets/img/carrusel/telefonica.png"
+            alt="Logo Telefónica"
+          />
+          <img src="../assets/img/carrusel/sabadell.png" alt="Logo Sabadell" />
+          <img src="../assets/img/carrusel/novartis.png" alt="Logo Novartis" />
+          <img src="../assets/img/carrusel/momentum.png" alt="Logo Momentum" />
+        </div>
+        <div>
+          <img src="../assets/img/carrusel/ing.png" alt="Logo ING" />
+          <img src="../assets/img/carrusel/iberia.png" alt="Logo Iberia" />
+          <img
+            src="../assets/img/carrusel/decathlon.png"
+            alt="Logo Decathlon"
+          />
+          <img src="../assets/img/carrusel/colgate.png" alt="Logo Colgate" />
+        </div>
+        <div>
+          <img
+            src="../assets/img/carrusel/decathlon.png"
+            alt="Logo Decathlon"
+          />
+          <img src="../assets/img/carrusel/colgate.png" alt="Logo Colgate" />
+          <img src="../assets/img/carrusel/cinesa.png" alt="Logo Cinesa" />
+          <img src="../assets/img/carrusel/calvo.png" alt="Logo Calvo" />
+        </div>
+        <div>
+          <img src="../assets/img/carrusel/bayer.png" alt="Logo Bayer" />
+          <img src="../assets/img/carrusel/adecco.png" alt="Logo Adecco" />
+        </div>
+      </div>
+    </section>
+    <script>
+      const container = document.querySelector(".carrusel-container");
+      const blocks = document.querySelectorAll(".carrusel-container > div");
+      let currentSlide = 0;
+
+      function moveCarousel() {
+        currentSlide = (currentSlide + 1) % blocks.length;
+        container.style.transform = `translateX(-${currentSlide * 25}%)`;
+      }
+
+      setInterval(moveCarousel, 2000); // cada 2s
+    </script>
+
+    <footer>
+      <div class="footer-naranja">
+        <div class="footer-texto">
+          <a href="">REGALA LA<br />EXPERIENCIA</a>
+          <p>673 423 738</p>
+          <p>ADN@ENIGMAMADRID.ES</p>
+          <a href="">¿DÓNDE ESTAMOS?</a>
+        </div>
+        <div class="footer-iconos">
+          <a href=""
+            ><img src="../assets/svg/tripadvisor.svg" alt="Tripadvisor"
+          /></a>
+          <a href=""
+            ><img src="../assets/svg/instagram.svg" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-negro">
+        <a href="blog.html">BLOG</a>
+        <a href="aviso-legal.html">AVISO LEGAL</a>
+        <a href="privacidad.html">PRIVACIDAD</a>
+        <a href="terminos-condiciones.html">TERMINOS Y CONDICIONES</a>
+        <a href="sitemap.html">SITEMAP</a>
+      </div>
+    </footer>
+  </body>
+</html>
