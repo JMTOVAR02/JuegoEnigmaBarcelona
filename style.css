@@ -182,7 +182,7 @@ main {
   letter-spacing: 0.5px;
 }
 
-/* TERMINOS Y CONDICIONES */ /* AVISO LEGAL */ /* PRIVACIDAD */
+/*////////TERMINOS Y CONDICIONES////////AVISO LEGAL/////////////PRIVACIDAD/////////////////*/
 
 .main-terminos,
 .main-aviso-legal,
@@ -225,6 +225,388 @@ main {
   text-align: justify;
   line-height: 1.5;
 }
+
+/*////////////////////////////COLABOREMOS////////////////////////////*/
+.body-colaboremos {
+  background-image: url(assets/img/bg_colaboremos.jpg);
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carrusel-1 {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 8px;
+  background-color: #ff5f01;
+}
+
+.contenedor-1 {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: deslizar 30s infinite;
+}
+
+@keyframes deslizar {
+
+  0%,
+  30% {
+    transform: translateX(0);
+  }
+
+  33.33%,
+  63.33% {
+    transform: translateX(-33.33%);
+  }
+
+  66.66%,
+  96.66% {
+    transform: translateX(-66.67%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.contenedor-1 img {
+  background-size: cover;
+  width: 100%;
+  object-fit: cover;
+}
+
+.colaboremos {
+  margin: 3% 5%;
+}
+
+.colaboremos h1 {
+  font-size: 40px;
+}
+
+.colaboremos h1,
+h2,
+h3 {
+  color: #ff5f01;
+}
+
+.colaboremos p {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.colaboremos button,
+.colaboremos a {
+  background-color: #ff5f01;
+  border: none;
+  width: 140px;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.colaboremos-contenedor-1 {
+  display: flex;
+  margin: 3% 20%;
+  justify-content: space-between;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.colaboremos-contenedor-1 img {
+  width: 45%;
+}
+
+#colaboremos-separador-1 {
+  margin-left: 7%;
+  margin-bottom: 0%;
+  position: absolute;
+  right: 0;
+}
+
+.colaboremos-contenedor-2 {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-bottom: 2%;
+  font-size: 25px;
+}
+
+.contenedor-2-lista {
+  display: flex;
+  margin-left: 20%;
+  gap: 200px;
+  margin-bottom: 3%;
+}
+
+.contenedor-2-lista ul {
+  padding: 2%;
+  list-style: none;
+}
+
+.contenedor-2-lista li {
+  margin-bottom: 6%;
+}
+
+.contenedor-2-lista li::before {
+  content: "- ";
+  color: black;
+}
+
+.contenedor-2-lista img {
+  width: 35%;
+}
+
+.colaboremos-contenedor-3 {
+  display: flex;
+  margin: 3% 20%;
+  justify-content: space-between;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#colaboremos-separador-2 {
+  margin-right: 7%;
+  margin-bottom: 0%;
+  position: absolute;
+  left: 0;
+}
+
+.colaboremos-contenedor-4 {
+  margin-top: 10%;
+  margin-right: 17%;
+  text-align: right;
+  margin-bottom: 2%;
+  font-size: 25px;
+}
+
+.colaboremos-contenedor-5 {
+  display: flex;
+  margin-right: 17%;
+  margin-bottom: 3%;
+  gap: 20px;
+}
+
+.colaboremos-contenedor-5 p {
+  width: 60%;
+}
+
+.contenedor-5-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  width: 800px;
+  height: 350px;
+  overflow: hidden;
+
+}
+
+.contenedor-5-img img {
+  transform: scale(0.6);
+}
+
+.contenedor-6 {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.contenedor-6-cuadrado {
+  width: 280px;
+  height: 150px;
+  background-color: #343434;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.contenedor-6-cuadrado h4 {
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+.contenedor-6-cuadrado p {
+  background-color: #343434;
+  color: white;
+  font-size: 15px;
+}
+
+.contenedor-6-flecha {
+  margin-top: 3%;
+  display: flex;
+  margin-left: 17%;
+}
+
+.contenedor-6-flecha p {
+  background-color: #343434;
+  width: 950px;
+}
+
+.contenedor-6-boton {
+  margin-top: 2%;
+  margin-bottom: 3%;
+  text-align: right;
+  margin-right: 17%;
+}
+
+#colaboremos-separador-3 {
+  margin-left: 7%;
+  margin-bottom: 0%;
+  position: absolute;
+  right: 0;
+}
+
+.contenedor-7 {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-bottom: 2%;
+  font-size: 25px;
+}
+
+.contenedor-7-conjunto {
+  display: flex;
+  margin-left: 25%;
+}
+
+.contenedor-7-conjunto img {
+  width: 300px;
+  margin-right: 11%;
+}
+
+.contenedor-7-conjunto p {
+  justify-content: center;
+  margin-right: 23%;
+}
+
+.contenedor-7-conjunto-boton {
+  margin-right: 17%;
+  text-align: right;
+  margin-bottom: 3%;
+}
+
+#colaboremos-separador-4 {
+  margin-right: 7%;
+  margin-bottom: 0%;
+  position: absolute;
+  left: 0;
+}
+
+.contenedor-8 {
+  margin-top: 10%;
+  margin-right: 17%;
+  text-align: right;
+  margin-bottom: 2%;
+  font-size: 25px;
+}
+
+.contenedor-8-conjunto {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+.contenedor-8-conjunto img {
+  width: 600px;
+  margin-right: 17%;
+  margin-left: 2%;
+}
+
+.contenedor-8-conjunto p {
+  justify-content: center;
+  margin-left: 20%;
+  margin-bottom: 3%;
+}
+
+.contenedor-8-conjunto-boton {
+  text-align: right;
+}
+
+.contenedor-final {
+  text-align: center;
+  font-size: 22px;
+  margin: 7% 17%;
+  margin-bottom: 4%;
+}
+
+.carrusel-2 {
+  width: 60%;
+  height: 120px;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  overflow: hidden;
+  position: relative;
+}
+
+.contenedor-2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  animation: deslizar-2 20s infinite;
+}
+
+.contenedor-2 img {
+  width: 150px;
+  margin: 5px 5px;
+}
+
+.slide-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 23%;
+  gap: 20px;
+}
+
+.slide-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 23%;
+  gap: 20px;
+}
+
+.slide-3 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 15%;
+  gap: 20px;
+}
+
+@keyframes deslizar-2 {
+
+  0%,
+  30% {
+    transform: translateX(0);
+  }
+
+  33.33%,
+  63.33% {
+    transform: translateX(-90.33%);
+  }
+
+  66.66%,
+  96.66% {
+    transform: translateX(-180.67%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /*////////////////////////////SERVICIOS////////////////////////////*/
 .servicios {
   display: flex;
@@ -353,7 +735,8 @@ main {
   padding: 0.65em 0.5em;
   align-self: flex-start;
 }
-/*/ ///////////////////////////RETOS////////////////////////////*/
+
+/*////////////////////////////RETOS////////////////////////////*/
 .retos {
   display: flex;
   flex-direction: column;
