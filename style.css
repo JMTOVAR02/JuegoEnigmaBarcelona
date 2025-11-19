@@ -1749,6 +1749,32 @@ p {
   height: 100vh;
 }
 
+.whatsapp {
+  position: fixed;
+  bottom: 120px;
+  right: 25px;
+  z-index: 9998;
+  background-color: #25d366;
+  padding: 0.7em;
+  border-radius: 20em;
+  height: 60px;
+  width: 60px;
+  transition: background-color 0.5s ease;
+}
+
+.whatsapp a {
+  visibility: hidden;
+}
+
+.whatsapp:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp img {
+  width: 40px;
+  visibility: visible;
+}
+
 @media (max-width: 768px) {
   header {
     padding: 0;
@@ -2010,5 +2036,9 @@ p {
   .panel-madrid-box {
     padding: 0;
     align-self: flex-end;
+  }
+
+  .whatsapp {
+    bottom: 35px;
   }
 }
