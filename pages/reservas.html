@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Enigma Madrid | Escape Room</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../assets/ico/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="body-no-scroll">
+    <header>
+      <div>
+        <ul>
+          <li>
+            <img src="../assets/svg/spain.svg" alt="Icono bandera de España" />
+          </li>
+          <li>
+            <img
+              src="../assets/svg/usa.svg"
+              alt="Icono bandera de Estados Unidos"
+            />
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <a href="/"
+          ><img
+            src="https://juegoenigmamadrid.es/wp-content/themes/juegoenigma/images/logo.png?x24212"
+            alt="Logo Enigma"
+        /></a>
+        <div class="madrid btn-madrid-map">
+          <p>/MADRID</p>
+          <span>+</span>
+        </div>
+        <ul>
+          <li>
+            <a href="/">Escape Room</a>
+          </li>
+          <li>
+            <a href="./pages/paraRegalar.html">Para regalar</a>
+          </li>
+          <li><a href="./pages/empresas.html">Empresas</a></li>
+          <li><a href="../colaboremos.html">Colaboremos</a></li>
+          <li>
+            <a href="./pages/reservas.html" class="reservas">Reservar</a>
+          </li>
+        </ul>
+        <button class="menu-toggle">
+          <div class="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+          <div class="mobile-menu">
+            <span><a href="/">Escape Room</a></span>
+            <span><a href="./paraRegalar.html">Para Regalar</a></span>
+            <span><a href="./empresas.html">Empresas</a></span>
+            <span><a href="../colaboremos.html">Colaboremos</a></span>
+            <span><a href="/">Contáctanos</a></span>
+
+            <div class="flags">
+              <img
+                src="../assets/svg/spain.svg"
+                alt="Icono bandera de España"
+              />
+              <img
+                src="../assets/svg/usa.svg"
+                alt="Icono bandera de Estados Unidos"
+              />
+            </div>
+            <a href="./pages/reservas.html" class="btn-reservar-mobile"
+              >RESERVAR</a
+            >
+          </div>
+        </button>
+      </nav>
+      <div id="panel-madrid" class="panel-madrid-modal">
+        <div class="panel-madrid-box">
+          <button class="panel-madrid-close">&times;</button>
+
+          <img
+            src="../assets/img/cityMap.png"
+            alt="Mapa Enigma España"
+            class="mapa-madrid-img"
+          />
+        </div>
+      </div>
+    </header>
+    <a href="./pages/reservas.html" class="btn-reservar-sticky">RESERVAR</a>
+    <script>
+      const btnMadridMap = document.querySelector(".btn-madrid-map");
+      const panelMadrid = document.getElementById("panel-madrid");
+      const cerrarMadrid = panelMadrid.querySelector(".panel-madrid-close");
+      const stickyButton = document.querySelector(".btn-reservar-sticky");
+
+      btnMadridMap.addEventListener("click", () => {
+        panelMadrid.classList.add("panel-open");
+        stickyBtn.classList.add("hidden");
+        document.body.classList.add("body-no-scroll");
+      });
+
+      cerrarMadrid.addEventListener("click", () => {
+        panelMadrid.classList.remove("panel-open");
+        stickyBtn.classList.remove("hidden");
+        document.body.classList.remove("body-no-scroll");
+      });
+
+      panelMadrid.addEventListener("click", (e) => {
+        if (e.target === panelMadrid) {
+          panelMadrid.classList.remove("panel-open");
+          stickyBtn.classList.remove("hidden");
+          document.body.classList.remove("body-no-scroll");
+        }
+      });
+    </script>
+    <script>
+      const burger = document.querySelector(".burger");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const stickyBtn = document.querySelector(".btn-reservar-sticky");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+        stickyBtn.classList.toggle("hidden");
+      });
+    </script>
+    <section class="reservar-title">
+      <h1>Reserva en Enigma Madrid</h1>
+    </section>
+    <section class="reservar-contenedor">
+      <div>
+        <h3>¿NO SABEÍS CUANTOS SEREÍS?</h3>
+        <p>
+          ¡Reservad para dos personas o los que sepáis que seréis seguro y pagad
+          la diferencia cuando vengáis!
+        </p>
+      </div>
+      <div>
+        <h3>MENORES DE EDAD</h3>
+        <p>
+          La actividad es realizable y disfrutable para menores siempre y cuando
+          vengan acompañados de un adulto o bien se contrate desde la reserva un
+          monitor que dinamice desde dentro de la sala (+19€)
+        </p>
+      </div>
+      <div>
+        <h3>DESCUENTO DE 10€ ENTRE SEMANA</h3>
+        <p>
+          Reserva con tu equipo de mínimo 3 agentes, a través del calendario de
+          la web, una misión de lunes a jueves con el código
+          <span>«TOP_SECRET»</span> y obtendrás 10€ de descuento en el importe
+          de la reserva (descuento NO válido en festivos ni para equipos de 2
+          agentes).
+        </p>
+      </div>
+      <div>
+        <h3>GRUPOS DE 6 AGENTES</h3>
+        <p>
+          No recomendado para grupos que tengan más de una misión a sus espaldas
+        </p>
+      </div>
+      <div>
+        <h3>15 MINUTOS ANTES</h3>
+        <p>
+          Se precisará que llegueis 15 minutos antes y que relleneis el
+          formulario de la rgpd que se os enviará en el correo de confirmación
+        </p>
+      </div>
+    </section>
+    <section id="reservasPage" class="reservas-aion">
+      <h2>Calendario de Reservas</h2>
+      <div id="aion-checkout">
+        <p class="loading-reservas">Cargando calendario de reservas...</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-naranja">
+        <div class="footer-texto">
+          <a href="">REGALA LA<br />EXPERIENCIA</a>
+          <p>673 423 738</p>
+          <p>ADN@ENIGMAMADRID.ES</p>
+          <a href="">¿DÓNDE ESTAMOS?</a>
+        </div>
+        <div class="footer-iconos">
+          <a href=""
+            ><img src="../assets/svg/tripadvisor.svg" alt="Tripadvisor"
+          /></a>
+          <a href=""
+            ><img src="../assets/svg/instagram.svg" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-negro">
+        <a href="../blog.html">BLOG</a>
+        <a href="../aviso-legal.html">AVISO LEGAL</a>
+        <a href="../privacidad.html">PRIVACIDAD</a>
+        <a href="../terminos-condiciones.html">TERMINOS Y CONDICIONES</a>
+        <a href="../sitemap.html">SITEMAP</a>
+      </div>
+    </footer>
+    <footer class="footer-responsive">
+      <p>
+        <a class="tooltip"
+          >LLAMAR
+          <span class="tooltip-text">tel: 673423738</span>
+        </a>
+      </p>
+      <p class="btn-donde-estamos">¿DONDE ESTAMOS?</p>
+    </footer>
+    <div id="panel-donde" class="panel-donde">
+      <div class="panel-donde__box">
+        <button class="panel-donde__close">&times;</button>
+        <h2>¿Dónde estamos?</h2>
+        <p class="box-direction">Calle Nuestra Señora del Carmen 7, 28039</p>
+        <div>
+          <p>
+            <img
+              src="../assets/img/metro_line_1.png"
+              alt="Icono línea metro 1 Madrid"
+            />
+            Estrecho (5 min)
+          </p>
+          <p>
+            <img
+              src="../assets/img/metro_line_1.png"
+              alt="Icono línea metro 1 Madrid"
+            />
+            Tetuán (5 min)
+          </p>
+          <p>
+            <img
+              src="../assets/img/metro_line_7.png"
+              alt="Icono línea metro 7 Madrid"
+            />
+            Francos Rodríguez (10 min)
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.6362047997254!2d-3.704801223570821!3d40.458420553100154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422900b21de8d5%3A0x8eec68a84be0731c!2sC%2F%20de%20Ntra.%20Sra.%20del%20Carmen%2C%207%2C%20Tetu%C3%A1n%2C%2028039%20Madrid!5e1!3m2!1ses!2ses!4v1763467414714!5m2!1ses!2ses"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <script>
+      const btnDonde = document.querySelector(".btn-donde-estamos");
+      const panelDonde = document.getElementById("panel-donde");
+      const cerrarDonde = document.querySelector(".panel-donde__close");
+
+      btnDonde.addEventListener("click", () => {
+        panelDonde.classList.add("panel-donde--open");
+      });
+
+      cerrarDonde.addEventListener("click", () => {
+        panelDonde.classList.remove("panel-donde--open");
+      });
+
+      panelDonde.addEventListener("click", (e) => {
+        if (e.target === panelDonde) {
+          panelDonde.classList.remove("panel-donde--open");
+        }
+      });
+    </script>
+  </body>
+</html>
