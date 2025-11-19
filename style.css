@@ -1775,6 +1775,134 @@ p {
   visibility: visible;
 }
 
+#btn-contacto {
+  cursor: pointer;
+}
+
+.open-popup2 {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: black;
+  padding: 30px;
+  border: 3px solid #ff6a00;
+  width: 550px;
+  height: 300px;
+  max-width: 90%;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.popup-box h2 {
+  color: #ff6a00;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+.popup-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.popup-info p:first-child {
+  font-weight: bold;
+  color: #ff6a00;
+}
+
+.popup-overlay-2 {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-box-2 {
+  background: black;
+  padding: 30px;
+  border: 3px solid #ff6a00;
+  width: 550px;
+  height: 300px;
+  max-width: 90%;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.popup-close-2 {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.popup-box-2 h2 {
+  color: #ff6a00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  width: 20%;
+}
+
+.popup-info-2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  align-items: flex-end;
+}
+
+.popup-info-2 a {
+  width: 20%;
+}
+
+.popup-info-2 p:first-child {
+  font-weight: bold;
+  color: #ff6a00;
+}
+
+.linkedin-icon-2 {
+  width: 40px;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
 @media (max-width: 768px) {
   header {
     padding: 0;

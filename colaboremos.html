@@ -6,6 +6,7 @@
     <title>Juego Enigma Madrid | Escape Room</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="../assets/ico/favicon.ico" type="image/x-icon" />
+    <script src="script.js" defer></script>
   </head>
 
   <body class="body-colaboremos">
@@ -97,7 +98,7 @@
             familia de Enigma y haz de tu hobby un negocio o invierte en un
             sector en alza.
           </p>
-          <button><a href="">CONTÁCTANOS</a></button>
+          <button id="btn-contacto">CONTÁCTANOS</button>
         </div>
 
         <img
@@ -145,7 +146,7 @@
           <img src="assets/img/flechas_colaboremos.png" alt="flechas" />
         </div>
         <div class="contenedor-6-boton">
-          <button><a href="">CONTÁCTANOS</a></button>
+          <button class="open-popup2">CONTÁCTANOS</button>
         </div>
         <img
           id="colaboremos-separador-3"
@@ -170,7 +171,7 @@
           </p>
         </div>
         <div class="contenedor-7-conjunto-boton">
-          <button><a href="">CONTÁCTANOS</a></button>
+          <button class="open-popup2">CONTÁCTANOS</button>
         </div>
         <img
           id="colaboremos-separador-4"
@@ -194,7 +195,7 @@
               nuestras promociones especiales para niños y jóvenes.
             </p>
             <div class="contenedor-8-conjunto-boton">
-              <button><a href="">CONTÁCTANOS</a></button>
+              <button class="open-popup2">CONTÁCTANOS</button>
             </div>
           </div>
           <img src="assets/img/niño_colaboremos.jpeg" alt="niño" />
@@ -260,5 +261,48 @@
         <a href="sitemap.html">SITEMAP</a>
       </div>
     </footer>
+    <!-- POPUP 1-->
+    <div id="popup-contacto" class="popup-overlay">
+      <div class="popup-box">
+        <button class="popup-close">&times;</button>
+
+        <h2>Contactanos</h2>
+
+        <div class="popup-info">
+          <p>Juego Enigma</p>
+          <p>Franquicias</p>
+          <p>Israel Navarrete</p>
+          <p>687 537 897</p>
+          <p>franquicias@juegoenigma.es</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- POPUP 2-->
+    <div id="popup-colaboremos" class="popup-overlay-2">
+      <div class="popup-box-2">
+        <button class="popup-close-2">&times;</button>
+
+        <h2>Contactanos</h2>
+
+        <div class="popup-info-2">
+          <p>Juego Enigma Madrid</p>
+          <p>Colaboremos</p>
+          <p>635 40 28 92</p>
+          <p>info@enigmamadrid.es</p>
+
+          <a
+            href="https://www.linkedin.com/company/juego-enigma-madrid/?originalSubdomain=es"
+            target="_blank"
+          >
+            <img
+              class="linkedin-icon-2"
+              src="../assets/svg/linkedin.svg"
+              alt="LinkedIn"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
