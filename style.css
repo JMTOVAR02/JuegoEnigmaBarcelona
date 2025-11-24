@@ -324,11 +324,17 @@ main {
   font-size: 40px;
 }
 
-.colaboremos h1,
-h2,
-h3 {
+.colaboremos h1{
+  color: #00b4d4;
+}
+
+.colaboremos h2 {
+  color: #000000;
+}
+.colaboremos h3 {
   color: #ff5f01;
 }
+
 
 .colaboremos p {
   color: black;
@@ -652,6 +658,17 @@ h3 {
   gap: 3em;
 }
 
+.servicios h2{
+
+    color: #000000;
+    font-size: 28px;
+}
+.servicios h3{
+
+    color: #ff5f01;
+    font-size: 20px;
+}
+
 .servicios-virus {
   width: 35.625em;
   display: flex;
@@ -680,6 +697,7 @@ h3 {
   gap: 2em;
   height: 100%;
   padding: 4em 2em 1.5em 2em;
+  
 }
 
 .virus-contenedor-text {
@@ -691,24 +709,11 @@ h3 {
 }
 
 .virus-contenedor-text p:first-of-type {
-  color: #ff5f01;
-  font-size: 24px;
-}
-
-.virus-contenedor-text :nth-child(2) {
-  font-size: 28px;
-}
-
-.virus-contenedor-text :nth-child(3) {
-  color: black;
+  color: #000000;
   font-size: 16px;
-  line-height: 24px;
+  text-align: justify;
 }
 
-.virus-contenedor-text :last-child {
-  font-size: 20px;
-  font-weight: 700;
-}
 
 .virus-contenedor-precio {
   display: flex;
@@ -727,7 +732,7 @@ h3 {
 
 .virus-contenedor-boton {
   text-decoration: none;
-  color: #007bbf;
+  color: #ffffff;
   background-color: #ff5f01;
   padding: 0.65em 0.5em;
   align-self: flex-end;
@@ -765,11 +770,10 @@ h3 {
 
 .keylock-contenedor-boton {
   text-decoration: none;
-  color: #007bbf;
-
+  color: #ffffff;
   background-color: #ff5f01;
   padding: 0.65em 0.5em;
-  align-self: flex-start;
+  align-self: flex-end;
 }
 
 /*////////////////////////////RETOS////////////////////////////*/
@@ -815,6 +819,7 @@ h3 {
   width: 70%;
   position: absolute;
   top: -60px;
+  right: 20px;
 }
 
 .retos-container-1 div h3 {
@@ -822,12 +827,13 @@ h3 {
   font-size: 28px;
   position: absolute;
   top: -20px;
+  text-align: right;
   position: relative;
-  margin-left: 9em;
+  margin-left: 6em;
 }
 
 .retos-container-1 div .engranaje {
-  margin-left: 5em;
+  margin-left: 1em;
 }
 
 .retos-container-1 div p {
@@ -835,7 +841,7 @@ h3 {
   font-size: 20px;
   width: 70%;
   position: absolute;
-  right: 200px;
+  right: 1px;
   line-height: 1.5;
   text-align: right;
   margin: 0 auto;
@@ -864,12 +870,12 @@ h3 {
   font-size: 28px;
   position: absolute;
   top: -20px;
+  text-align: left;
   position: relative;
-  margin-left: 6em;
 }
 
 .retos-container-2 div .laberinto {
-  margin-left: 10em;
+  margin-left: 1.5em;
 }
 
 .retos-container-2 div p {
@@ -877,7 +883,7 @@ h3 {
   font-size: 20px;
   width: 70%;
   position: absolute;
-  right: 80px;
+  right: 60px;
   line-height: 1.5;
   text-align: left;
   margin: 0 auto;
@@ -1106,7 +1112,6 @@ h3 {
 }
 
 .comprar-virus-title p {
-  font-family: "Montserrat";
   font-size: 1em;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
 }
@@ -2170,3 +2175,150 @@ p {
     bottom: 35px;
   }
 }
+
+
+
+/* responsive  SERVICIOS*/
+
+@media (max-width: 1024px) {
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding: 0 1.5em;
+  }
+
+  .servicios-virus,
+  .servicios-keylock {
+    width: 100%;
+    max-width: 40em;
+  }
+
+  .servicios-virus img,
+  .servicios-keylock img {
+    width: 170px;
+  }
+
+  .servicios-virus-contenedor,
+  .servicios-keylock-contenedor {
+    padding: 2em 1.5em;
+  }
+}
+
+/* movil*/
+
+@media (max-width: 768px) {
+  .servicios {
+    gap: 2.5em;
+  }
+
+  .servicios-virus img,
+  .servicios-keylock img {
+    width: 140px;
+  }
+
+  .servicios-virus-contenedor,
+  .servicios-keylock-contenedor {
+    padding: 1.8em 1.2em;
+    gap: 1.2em;
+  }
+
+  .virus-contenedor-text p,
+  .virus-contenedor-precio p,
+  .keylock-contenedor-text p,
+  .keylock-contenedor-precio p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .virus-contenedor-boton,
+  .keylock-contenedor-boton {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    padding: 0.8em 0;
+    font-size: 16px;
+  }
+}
+
+/* Responsive RETOS*/
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .retos {
+    width: 90%;
+  }
+
+  .retos-container img {
+    width: 50%;
+  }
+
+
+}
+  .retos-container-1 div h3,
+  .retos-container-2 div h3 {
+    margin-left: 1.5em;
+    font-size: 24px;
+  }
+
+  .retos-container-1 div p,
+  .retos-container-2 div p {
+    width: 80%;
+    font-size: 18px;
+  }
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .retos {
+    width: 100%;
+    margin-top: 3em;
+  }
+
+  /* Todos los bloques pasan a columna */
+  .retos-container-1,
+  .retos-container-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+  }
+
+  /* Imágenes grandes → 85% en móvil */
+  .retos-container img {
+    width: 85%;
+    display: none;
+
+    
+  }
+
+  /* Hexágonos pequeños */
+  .retos-container-1 div img,
+  .retos-container-2 div img {
+    width: 40%;
+    position: static;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Textos */
+  .retos-container-1 div h3,
+  .retos-container-2 div h3 {
+    margin: 0.5em auto 0 auto;
+    text-align: center;
+    position: static;
+    font-size: 22px;
+  }
+
+  .retos-container-1 div p,
+  .retos-container-2 div p {
+    position: static;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}
+
