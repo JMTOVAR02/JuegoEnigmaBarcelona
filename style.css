@@ -155,11 +155,13 @@ main {
 }
 
 .main-container {
-  height: 80vh;
+  min-height: 80vh; 
+  width: 100%;
   position: relative;
   background-image: url(./assets/img/home.png);
-  background-size: cover;
-  overflow: hidden;
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat; 
 }
 
 .reservas-container {
@@ -1687,14 +1689,14 @@ p {
 .footer-negro {
   display: flex;
   background-color: black;
-  gap: 70px;
+  gap: 20px;
   padding: 6px 6px;
 }
 
 .footer-negro a {
   text-decoration: none;
   color: white;
-  margin-left: 80px;
+  margin-left: 30px;
 }
 
 .panel-donde {
@@ -2177,6 +2179,14 @@ p {
 }
 
 
+@media (max-width: 768px) {
+  .main-container {
+    min-height: 50vh;
+    background-position: contain;    
+  }
+}
+
+
 
 /* responsive  SERVICIOS*/
 
@@ -2321,4 +2331,107 @@ p {
     font-size: 16px;
   }
 }
+
+
+
+/* Tablets (hasta ~1024px) */
+@media (max-width: 1024px) {
+  .reservas-container a {
+    font-size: 28px;
+    padding: 0.3em 4em;
+  }
+
+  .reservas-container p:first-of-type {
+    font-size: 28px;
+  }
+
+  .reservas-container p:nth-of-type(2),
+  .reservas-container p:last-of-type {
+    font-size: 20px;
+  }
+
+  .reservas-container .reservas-container-boton img {
+    width: 120px;
+  }
+}
+
+/* Móviles grandes (hasta ~768px) */
+@media (max-width: 768px) {
+  .reservas-container {
+    bottom: 20px;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .reservas-container .reservas-container-boton {
+    gap: 1em;
+  }
+
+  .reservas-container a {
+    font-size: 22px;
+    padding: 0.4em 3em;
+  }
+
+  .reservas-container p:first-of-type {
+    font-size: 22px;
+  }
+
+  .reservas-container p:nth-of-type(2),
+  .reservas-container p:last-of-type {
+    font-size: 18px;
+  }
+
+  .reservas-container .reservas-container-boton img {
+    width: 90px;
+  }
+}
+
+
+
+/*footer */
+/* Footer móvil oculto por defecto */
+.footer-mobile {
+  display: none;
+}
+
+/* FOOTER DESKTOP: visible solo en pantallas grandes */
+footer {
+  display: block;
+}
+
+/* RESPONSIVE: hasta 768px solo footer móvil */
+@media (max-width: 768px) {
+  footer {
+    display: none; /* Oculta footer original */
+  }
+
+  .footer-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff5f01;
+    z-index: 9999;
+  }
+
+  .btn-mobile {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.8em 0;
+  }
+
+  .btn-mobile.left {
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
 
